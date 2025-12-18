@@ -1,6 +1,6 @@
 -- [[ CONFIGURARE GENERALA ]] --
-local ScriptName = "Ionut Scripts" -- Pune aici numele tau
-local Creator = "Ionut" -- Pune aici numele tau de creator
+local ScriptName = "Ionut Scripts" 
+local Creator = "Ionut" 
 
 -- [[ NOTIFICARE START ]] --
 game:GetService("StarterGui"):SetCore("SendNotification", {
@@ -10,24 +10,23 @@ game:GetService("StarterGui"):SetCore("SendNotification", {
 })
 
 -- [[ LOGICA DE INCARCARE ]] --
--- Aici adaugi ID-ul jocului si link-ul catre scriptul tau raw de pe GitHub
 
-if game.PlaceId == 76558904092080 then -- ID pentru Da Hood (Exemplu)
-    loadstring(game:HttpGet("https://raw.githubusercontent.com/USER/REPO/main/script_dahood.lua"))()
+if game.PlaceId == 76558904092080 then -- ID-ul pentru jocul The Forge
+    -- Acest link va incarca fisierul the_forge.lua din repository-ul tau
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/Ionutz547/AxionScript/main/the_forge.lua"))()
 
-elseif game.PlaceId == 76558904092080 then -- ID pentru Prison Life (Exemplu)
-    loadstring(game:HttpGet("https://raw.githubusercontent.com/USER/REPO/main/script_prison.lua"))()
+elseif game.PlaceId == 2788229376 then -- ID pentru Da Hood (Exemplu)
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/Ionutz547/AxionScript/main/script_dahood.lua"))()
 
-elseif game.PlaceId == 76558904092080 then -- ID pentru Natural Disaster (Exemplu)
-    loadstring(game:HttpGet("https://raw.githubusercontent.com/USER/REPO/main/script_natural.lua"))()
+elseif game.PlaceId == 155615604 then -- ID pentru Prison Life (Exemplu)
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/Ionutz547/AxionScript/main/script_prison.lua"))()
 
 else
-    -- Daca jocul nu este in lista de mai sus, se executa un script universal (optional)
-    -- Sau primesti o notificare de eroare:
+    -- Daca joci altceva care nu e in lista de mai sus:
     game:GetService("StarterGui"):SetCore("SendNotification", {
         Title = "Eroare",
-        Text = "Acest joc nu este suportat inca!",
+        Text = "Jocul " .. game.Name .. " nu este suportat inca!",
         Duration = 10
     })
-    warn("Joc nesuportat. ID: " .. game.PlaceId)
+    warn("Joc nesuportat. ID detectat: " .. game.PlaceId)
 end
