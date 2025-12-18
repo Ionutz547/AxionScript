@@ -12,13 +12,13 @@ game:GetService("StarterGui"):SetCore("SendNotification", {
 -- [[ LOGICA DE INCARCARE ]] --
 -- Aici adaugi ID-ul jocului si link-ul catre scriptul tau raw de pe GitHub
 
-if game.PlaceId == 2788229376 then -- ID pentru Da Hood (Exemplu)
+if game.PlaceId == 76558904092080 then -- ID pentru Da Hood (Exemplu)
     loadstring(game:HttpGet("https://raw.githubusercontent.com/USER/REPO/main/script_dahood.lua"))()
 
-elseif game.PlaceId == 155615604 then -- ID pentru Prison Life (Exemplu)
+elseif game.PlaceId == 76558904092080 then -- ID pentru Prison Life (Exemplu)
     loadstring(game:HttpGet("https://raw.githubusercontent.com/USER/REPO/main/script_prison.lua"))()
 
-elseif game.PlaceId == 189707 then -- ID pentru Natural Disaster (Exemplu)
+elseif game.PlaceId == 76558904092080 then -- ID pentru Natural Disaster (Exemplu)
     loadstring(game:HttpGet("https://raw.githubusercontent.com/USER/REPO/main/script_natural.lua"))()
 
 else
